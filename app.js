@@ -66,4 +66,18 @@ function draw(e) { // Draw shapes based on the choosen tool
     ctx.stroke();
 }
 
+// Task 4: Add Color Selection and Canvas Clearing
+
+
+const colorPicker = document.getElementById('colorPicker'); // Event listener for selecting color
+colorPicker.addEventListener('input', (e) => {
+    selectedColor = e.target.value;
+});
+
+
+const clearButton = document.getElementById('clearCanvas'); // clear canvas event listener
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
 
